@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Teste Vocacional Interativo</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Descubra sua profissão ideal</h1>
+    <p class="subtitle">Rápido, moderno e com imagens. Responda uma pergunta por vez.</p>
+  </header>
+
+  <main id="main">
+    <section id="intro" class="card active">
+      <img src="images/hero.png" alt="hero" class="hero"/>
+      <h2>Comece pelo geral</h2>
+      <p>Responda 1 rápida pergunta inicial para descobrir qual área explorar. Depois poderá responder um teste curto por área.</p>
+      <div class="buttons">
+        <button id="startBtn" class="btn">Começar</button>
+      </div>
+    </section>
+
+    <section id="initialQuestion" class="card">
+      <h2>Qual dessas atividades você mais gosta?</h2>
+      <div class="options" id="initialOptions"></div>
+      <div class="progress">Pergunta <span id="pq">1</span> / <span id="pt">1</span></div>
+    </section>
+
+    <section id="areaTest" class="card">
+      <div class="area-header">
+        <img id="areaImage" src="images/placeholder.png" alt="area" />
+        <div>
+          <h2 id="areaTitle"></h2>
+          <p id="areaDesc"></p>
+        </div>
+      </div>
+
+      <div id="questionWrap">
+        <h3 id="qText"></h3>
+        <div id="qOptions" class="options"></div>
+      </div>
+
+      <div class="nav">
+        <button id="backBtn" class="btn ghost">Voltar</button>
+        <button id="skipBtn" class="btn ghost">Pular</button>
+      </div>
+      <div class="progress">Pergunta <span id="currentIdx">1</span> / <span id="totalIdx">1</span></div>
+    </section>
+
+    <section id="result" class="card">
+      <h2>Resultado</h2>
+      <p id="resultText" class="big"></p>
+      <div id="matches"></div>
+      <div class="buttons">
+        <button id="restart" class="btn">Refazer</button>
+        <a id="learnMore" class="btn ghost" href="#" target="_blank">Ver cursos e caminhos</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Projeto: Teste Vocacional • Feito para abrir no VS Code • Pronto para enviar ao GitHub</small>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
